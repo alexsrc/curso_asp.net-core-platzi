@@ -1,7 +1,7 @@
-@model IEnumerable<Alumno>
+@model IEnumerable<Curso>
 
 @{
-    ViewData["Title"] = "Información Alumno";
+    ViewData["Title"] = "Información Curso";
     Layout = "Simple";
 }
 
@@ -16,11 +16,11 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (Alumno alumno in @Model)
+    @foreach (Curso curso in @Model)
     {
         <tr>
-            <td>@alumno.Nombre</td>
-            <td>@alumno.Id</td>
+            <td>@curso.Nombre</td>
+            <td>@curso.Id</td>
         </tr>
     }
     </tbody>

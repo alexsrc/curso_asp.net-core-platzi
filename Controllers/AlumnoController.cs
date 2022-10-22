@@ -8,20 +8,30 @@ namespace platzi_asp_net_core.Controllers
 {
     public class AlumnoController : Controller
     {
-        public IActionResult Index()
+        [Route("Alumno/Index")]
+        [Route("Alumno/Index/{alumnoId?}")]
+        public IActionResult Index(string alumnoId)
         {
-            Alumno alumno = new Alumno()
+            
+            if (!string.IsNullOrWhiteSpace(alumnoId))
             {
-                Id = Guid.NewGuid().ToString(),
-                Nombre = "Alexander Ceballos"
-            };
+                Alumno alumno = (from asig in _context.Alumnos where asig.Id == alumnoId select asig)
+                    .SingleOrDefault();
 
-            return View(alumno);
+                if (alumno!=null)
+                {
+                    return View("Index",alumno);    
+                }
+                
+            }
+            IEnumerable<Alumno> listAlumno = _context.Alumnos;
+            return View("MultiAlumno", listAlumno);
+            
         }
 
         public IActionResult MultiAlumno()
         {
-            List<Alumno> listAlumno = GenerarAlumnosAlAzar();
+            IEnumerable<Alumno> listAlumno = _context.Alumnos;
 
             return View("MultiAlumno", listAlumno);
         }
@@ -42,6 +52,12 @@ namespace platzi_asp_net_core.Controllers
                 }).ToList();
 
             return listaAlumnos;
+        }
+        
+        private EscuelaContext _context;
+        public AlumnoController(EscuelaContext context)
+        {
+            _context = context;
         }
     }
 }

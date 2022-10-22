@@ -61,3 +61,6 @@ C:\Users\cebal\Documents\projects\platzi-asp-net-core\bin\Debug\netcoreapp3.1\ru
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Index.cshtml.g.cs
+C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\MultiCurso.cshtml.g.cs
+C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Create.cshtml.g.cs
