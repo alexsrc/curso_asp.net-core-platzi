@@ -64,3 +64,4 @@ C:\Users\cebal\Documents\projects\platzi-asp-net-core\bin\Debug\netcoreapp3.1\ru
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Index.cshtml.g.cs
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\MultiCurso.cshtml.g.cs
 C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Create.cshtml.g.cs
+C:\Users\cebal\Documents\projects\platzi-asp-net-core\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Edit.cshtml.g.cs

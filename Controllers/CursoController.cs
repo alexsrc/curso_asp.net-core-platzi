@@ -50,11 +50,42 @@ namespace platzi_asp_net_core.Controllers
                 return View(curso);
             }
             Escuela escuela = _context.Escuelas.FirstOrDefault();
+            
             curso.Id = Guid.NewGuid().ToString();
             curso.EscuelaId = escuela.Id;
             _context.Cursos.Add(curso);
             _context.SaveChanges();
             return View("index",curso);
+        }
+        
+        public IActionResult Edit(Curso curso)
+        {
+            return View("Edit",curso);
+        }
+        
+        [HttpPost]
+        public IActionResult Update(Curso curso,string CursoId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Edit",curso);
+            }
+            Escuela escuela = _context.Escuelas.FirstOrDefault();
+            
+            
+            
+            curso.EscuelaId = escuela.Id;
+            _context.Cursos.Update(curso);
+            _context.SaveChanges();
+            return MultiCurso();
+        }
+
+        public IActionResult Delete(Curso curso)
+        {
+            
+            _context.Cursos.Remove(curso);
+            _context.SaveChanges();
+            return MultiCurso();
         }
         
         private EscuelaContext _context;
